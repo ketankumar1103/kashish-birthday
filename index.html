@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#54152f">
+<meta property="og:title" content="For Kashish ❤️ — From Kittu">
+<meta property="og:description" content="A little birthday story made with love, just for you.">
+<title>For Kashish ❤️ | From Kittu</title>
+<style>
+:root{--wine:#54152f;--rose:#b93d6b;--pink:#f8dbe6;--cream:#fff8f1;--gold:#e5b85f;--ink:#34232b}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);font-family:Georgia,"Times New Roman",serif;background:var(--cream);overflow-x:hidden}
+button{font:inherit}
+.screen{min-height:100svh;display:grid;place-items:center;padding:24px;position:relative}
+#intro{background:radial-gradient(circle at 50% 20%,#fff7fb,#f6cfdd 70%,#e8aec4);overflow:hidden}
+.sparkles{position:absolute;inset:0;pointer-events:none}
+.sparkle{position:absolute;animation:twinkle 2.5s infinite ease-in-out}
+@keyframes twinkle{50%{opacity:.25;transform:scale(.65)}}
+.envelope-wrap{text-align:center;position:relative;z-index:2}
+.intro-small{letter-spacing:.25em;text-transform:uppercase;font-size:.72rem;color:#71334d}
+h1{font-size:clamp(2.8rem,12vw,6.8rem);line-height:.88;margin:14px 0;color:var(--wine)}
+.intro-sub{font-size:clamp(1rem,4vw,1.25rem);max-width:500px;line-height:1.7;margin:0 auto 25px}
+.envelope{width:min(360px,82vw);height:230px;margin:20px auto 26px;position:relative;cursor:pointer;filter:drop-shadow(0 22px 28px #7c34504a)}
+.env-back{position:absolute;inset:0;background:#fff2f6;border-radius:12px;border:2px solid #e6a9bd}
+.env-pocket{position:absolute;left:0;right:0;bottom:0;height:70%;background:#f5cad8;clip-path:polygon(0 0,50% 55%,100% 0,100% 100%,0 100%);border-radius:0 0 12px 12px}
+.env-flap{position:absolute;left:0;top:0;width:100%;height:62%;background:#fbe4ec;clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top;transition:.9s;z-index:3}
+.envelope.open .env-flap{transform:rotateX(180deg)}
+.letter-card{position:absolute;left:7%;width:86%;height:82%;top:12%;background:#fffdf9;border-radius:8px;z-index:2;transition:1s;display:flex;align-items:center;justify-content:center;flex-direction:column;box-shadow:0 4px 12px #00000012}
+.envelope.open .letter-card{transform:translateY(-120px)}
+.seal{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:52px;height:52px;border-radius:50%;background:var(--wine);color:white;display:grid;place-items:center;z-index:4;transition:.5s}
+.envelope.open .seal{opacity:0}
+.cta{border:0;background:var(--wine);color:#fff;padding:14px 23px;border-radius:999px;cursor:pointer;box-shadow:0 9px 24px #54152f35}
+.hint{font-size:.9rem;color:#74435a;margin-top:8px}
+#story{display:none}
+section{padding:75px 18px}.wrap{width:min(980px,94vw);margin:auto}
+.title{text-align:center;color:var(--wine);font-size:clamp(2.1rem,7vw,3.6rem);margin:0 0 12px}
+.subtitle{text-align:center;line-height:1.75;color:#765b66;max-width:680px;margin:0 auto 34px}
+.letter{background:#fff;border:1px solid #efd0db;border-radius:28px;padding:30px;box-shadow:0 18px 55px #6d274312;line-height:1.9;font-size:1.1rem}
+.shayari{margin:24px 0;padding:25px 18px;background:#fff8ec;border-left:4px solid var(--gold);border-radius:0 18px 18px 0;text-align:center;line-height:2;font-size:1.16rem}
+.memories{background:linear-gradient(#fff,#fff5f8)}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+.photo{background:#fff;padding:9px;border-radius:20px;box-shadow:0 15px 38px #65213c16;transform:rotate(var(--r))}
+.photo img{width:100%;height:430px;object-fit:cover;border-radius:14px;display:block}
+.caption{text-align:center;padding:10px 4px 3px;color:#825669;font-size:.9rem}
+.cake-section{background:radial-gradient(circle,#fffaf2,#f9dfe7)}
+.cake{width:250px;height:190px;position:relative;margin:28px auto 20px}
+.plate{position:absolute;bottom:10px;left:15px;width:220px;height:25px;background:#d7a9b7;border-radius:50%}
+.layer{position:absolute;bottom:32px;left:35px;width:180px;height:70px;background:#ef91ae;border-radius:12px 12px 20px 20px;box-shadow:inset 0 -10px #df6f93}
+.icing{position:absolute;bottom:87px;left:38px;width:174px;height:38px;background:#fff1f5;border-radius:50% 50% 25px 25px}
+.candle{position:absolute;bottom:119px;width:10px;height:55px;background:#fff;border-radius:3px}
+.c1{left:92px}.c2{left:120px}.c3{left:148px}
+.flame{position:absolute;width:15px;height:22px;background:#ffb62e;border-radius:50% 50% 50% 0;transform:rotate(-45deg);top:-20px;left:-2px;animation:flicker .65s infinite alternate}
+@keyframes flicker{to{transform:rotate(-42deg) scale(1.1);opacity:.75}}
+.blow{margin-top:5px}
+#finalMessage{display:none;text-align:center;background:#fff;border-radius:26px;padding:30px;box-shadow:0 15px 50px #69233e18}
+#finalMessage h3{font-size:2rem;color:var(--wine);margin:0 0 15px}
+#finalMessage p{font-size:1.12rem;line-height:1.85}
+.slider{position:relative;overflow:hidden;border-radius:28px;box-shadow:0 20px 60px #5921391c}
+.slides{display:flex;transition:transform .55s ease}
+.slide{min-width:100%;background:#fff;padding:10px}
+.slide img{display:block;width:100%;height:min(70vh,650px);object-fit:cover;border-radius:20px}
+.slide-nav{display:flex;justify-content:center;gap:10px;margin-top:16px}.dot{width:11px;height:11px;border:0;border-radius:50%;background:#ddb4c3;cursor:pointer}.dot.active{background:var(--wine)}
+.share{text-align:center;background:linear-gradient(135deg,#54152f,#a63e68);color:white}
+.share .title{color:white}.share .subtitle{color:#f8dfe8}
+.share-row{display:flex;justify-content:center;flex-wrap:wrap;gap:10px}
+.sharebtn{border:1px solid #ffffff55;background:#ffffff18;color:white;padding:13px 18px;border-radius:999px;cursor:pointer}
+footer{text-align:center;padding:30px 18px 55px;color:#896b76}
+.music{position:fixed;right:16px;bottom:16px;z-index:30;width:53px;height:53px;border:0;border-radius:50%;background:var(--wine);color:white;box-shadow:0 10px 30px #54152f55;cursor:pointer;font-size:1.15rem}
+.hearts{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:20}.heart{position:absolute;bottom:-30px;animation:rise 6s linear forwards}
+@keyframes rise{to{transform:translateY(-115vh) rotate(40deg);opacity:0}}
+.toast{position:fixed;left:50%;bottom:80px;transform:translateX(-50%);background:#34232b;color:#fff;padding:11px 17px;border-radius:999px;opacity:0;transition:.25s;z-index:50}.toast.show{opacity:1}
+@media(max-width:760px){.gallery{grid-template-columns:1fr}.photo img{height:520px}.photo:nth-child(2){--r:0deg!important}.letter{padding:23px}.envelope.open .letter-card{transform:translateY(-95px)}}
+</style>
+</head>
+<body>
+<div class="hearts" id="hearts"></div>
+<button class="music" id="music" title="Birthday music">♫</button>
+<div class="toast" id="toast"></div>
+
+<div id="intro" class="screen">
+  <div class="sparkles" id="sparkles"></div>
+  <div class="envelope-wrap">
+    <div class="intro-small">A little surprise from Kittu</div>
+    <h1>For Kashish ❤️</h1>
+    <p class="intro-sub">There is a tiny story inside this envelope… and it begins with your birthday.</p>
+    <div class="envelope" id="envelope" onclick="openLetter()">
+      <div class="env-back"></div>
+      <div class="letter-card"><strong style="font-size:1.35rem;color:#54152f">Happy Birthday, Kittu ❤️</strong><small style="margin-top:8px">21 September</small></div>
+      <div class="env-pocket"></div>
+      <div class="env-flap"></div>
+      <div class="seal">❤</div>
+    </div>
+    <button class="cta" onclick="openLetter()">Open your birthday letter 💌</button>
+    <div class="hint">Tap the envelope to begin</div>
+  </div>
+</div>
+
+<main id="story">
+<section>
+<div class="wrap">
+  <h2 class="title">Happy Birthday, Kashish ❤️</h2>
+  <p class="subtitle">From the person who calls you Kittu, bothers you, cares for you, and feels lucky to have you.</p>
+  <div class="letter">
+    <p><b>Dear Kittu,</b></p>
+    <p>Today is your birthday, but somehow it feels like a celebration for me too — because this beautiful day brought you into the world.</p>
+    <p>I don't need a perfect reason to smile when I have memories with you. Your little expressions, your laughter, the way you look at me, and even the small ordinary moments somehow become special.</p>
+    <div class="shayari">
+      Teri muskaan meri favourite si baat hai,<br>
+      Tera saath meri sabse pyaari saugaat hai.<br>
+      Har janamdin par bas itni si dua rahe,<br>
+      <b>Tu khush rahe, aur meri zindagi mein yunhi khaas rahe. ❤️</b>
+    </div>
+    <p>May this year bring you peace in your heart, magic in your days, and countless reasons to smile. And whenever life gets a little difficult, I hope you remember — <b>Kittu is always cheering for you.</b></p>
+    <p style="text-align:right;margin-bottom:0"><i>With all my love,<br>Kittu ❤️</i></p>
+  </div>
+</div>
+</section>
+
+<section class="memories">
+<div class="wrap">
+  <h2 class="title">Our little memories 📸</h2>
+  <p class="subtitle">Different moments. Same two people. A lot of feelings.</p>
+  <div class="slider">
+    <div class="slides" id="slides">
+      <div class="slide"><img src="assets/memory-1.jpg" alt="Kashish and Kittu together"><div class="caption">One of those moments I want to keep forever. ❤️</div></div>
+      <div class="slide"><img src="assets/memory-2.jpg" alt="Kashish in a green saree"><div class="caption">And then you wore that green saree… ✨</div></div>
+      <div class="slide"><img src="assets/memory-3.jpg" alt="Kashish and Kittu together at home"><div class="caption">Just us. Exactly how I like it. ❤️</div></div>
+    </div>
+  </div>
+  <div class="slide-nav">
+    <button class="dot active" onclick="go(0)"></button><button class="dot" onclick="go(1)"></button><button class="dot" onclick="go(2)"></button>
+  </div>
+</div>
+</section>
+
+<section class="cake-section">
+<div class="wrap" style="text-align:center">
+  <h2 class="title">Make a wish, Kittu 🎂</h2>
+  <p class="subtitle">Three candles. One birthday. And one very special girl.</p>
+  <div class="cake">
+    <div class="plate"></div><div class="layer"></div><div class="icing"></div>
+    <div class="candle c1"><span class="flame"></span></div>
+    <div class="candle c2"><span class="flame"></span></div>
+    <div class="candle c3"><span class="flame"></span></div>
+  </div>
+  <button class="cta blow" onclick="blowCandles()">Blow the candles ✨</button>
+  <div id="finalMessage">
+    <h3>Wish made? ❤️</h3>
+    <p>Then here's mine:<br><b>May I get to celebrate many, many more birthdays with you.</b></p>
+    <p>Happy Birthday, Kashish. You deserve all the happiness in the world — and a little extra from Kittu. 🥰</p>
+  </div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+  <h2 class="title">One last thing… 💗</h2>
+  <div class="letter" style="text-align:center">
+    <p style="font-size:1.3rem">If I could turn every beautiful memory of us into a gift, I'd probably need a whole room.</p>
+    <p style="font-size:1.35rem;color:#54152f"><b>So for now, here's a little corner of the internet that belongs to you.</b></p>
+    <div class="shayari">
+      Na chaand chahiye, na sitaaron ki khwaahish hai,<br>
+      Bas tere saath har khushi ki guzaarish hai.<br>
+      Tu rahe muskurati, yahi dil ki fariyaad hai,<br>
+      <b>Kittu ki duniya mein, Kashish sabse khaas hai. ❤️</b>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="share">
+<div class="wrap">
+  <h2 class="title">Keep this little surprise ❤️</h2>
+  <p class="subtitle">Share the birthday page with someone who should see it — or simply keep the link as a memory.</p>
+  <div class="share-row">
+    <button class="sharebtn" onclick="shareWhatsApp()">Share on WhatsApp</button>
+    <button class="sharebtn" onclick="shareTelegram()">Share on Telegram</button>
+    <button class="sharebtn" onclick="copyLink()">Copy link</button>
+  </div>
+</div>
+</section>
+</main>
+
+<footer>Made with ❤️ by Kittu, especially for Kashish • 21 September</footer>
+
+<script>
+function openLetter(){
+  const e=document.getElementById('envelope');
+  e.classList.add('open');
+  setTimeout(()=>{document.getElementById('story').style.display='block';document.getElementById('story').scrollIntoView({behavior:'smooth'});burst(18)},750);
+}
+function burst(n=20){
+  for(let i=0;i<n;i++){
+    const h=document.createElement('div');h.className='heart';h.textContent=['❤','💗','💕','✨'][Math.floor(Math.random()*4)];
+    h.style.left=Math.random()*100+'vw';h.style.fontSize=(14+Math.random()*24)+'px';h.style.animationDuration=(3+Math.random()*4)+'s';
+    document.getElementById('hearts').appendChild(h);setTimeout(()=>h.remove(),7500);
+  }
+}
+setInterval(()=>{if(Math.random()<.55)burst(1)},1400);
+
+for(let i=0;i<35;i++){
+ const s=document.createElement('div');s.className='sparkle';s.textContent=['✦','·','✧'][Math.floor(Math.random()*3)];
+ s.style.left=Math.random()*100+'%';s.style.top=Math.random()*100+'%';s.style.fontSize=(10+Math.random()*18)+'px';
+ s.style.animationDelay=Math.random()*2.5+'s';document.getElementById('sparkles').appendChild(s);
+}
+
+let idx=0;
+function go(n){idx=n;document.getElementById('slides').style.transform=`translateX(-${n*100}%)`;document.querySelectorAll('.dot').forEach((d,i)=>d.classList.toggle('active',i===n))}
+setInterval(()=>go((idx+1)%3),4500);
+
+function blowCandles(){
+ document.querySelectorAll('.flame').forEach(x=>x.style.display='none');
+ document.getElementById('finalMessage').style.display='block';
+ burst(35);
+ document.getElementById('finalMessage').scrollIntoView({behavior:'smooth',block:'center'});
+}
+const toast=document.getElementById('toast');
+function showToast(t){toast.textContent=t;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),2200)}
+function shareWhatsApp(){
+ const u=encodeURIComponent(location.href),t=encodeURIComponent("Kashish ❤️ I made a little birthday surprise for you. Open it 🎂✨");
+ window.open("https://wa.me/?text="+t+"%20"+u,"_blank")
+}
+function shareTelegram(){
+ const u=encodeURIComponent(location.href),t=encodeURIComponent("A little birthday surprise for Kashish ❤️🎂 — from Kittu");
+ window.open("https://t.me/share/url?url="+u+"&text="+t,"_blank")
+}
+async function copyLink(){try{await navigator.clipboard.writeText(location.href);showToast('Link copied ❤️')}catch(e){showToast('Copy the page URL from your browser')}}
+let ctx=null,playing=false;
+const notes=[[392,.25],[392,.25],[440,.5],[392,.5],[523,.5],[494,.9],[392,.25],[392,.25],[440,.5],[392,.5],[587,.5],[523,.9],[392,.25],[392,.25],[784,.5],[659,.5],[523,.5],[494,.5],[440,.9]];
+function tone(f,d,t){const o=ctx.createOscillator(),g=ctx.createGain();o.type='sine';o.frequency.value=f;g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(.1,t+.03);g.gain.exponentialRampToValueAtTime(.0001,t+d-.04);o.connect(g);g.connect(ctx.destination);o.start(t);o.stop(t+d)}
+function music(){
+ if(!ctx)ctx=new(window.AudioContext||window.webkitAudioContext)();
+ if(playing){ctx.suspend();playing=false;document.getElementById('music').textContent='♫';return}
+ ctx.resume();playing=true;document.getElementById('music').textContent='❚❚';let t=ctx.currentTime+.05;
+ notes.forEach(n=>{tone(n[0],n[1],t);t+=n[1]+.035});setTimeout(()=>{playing=false;document.getElementById('music').textContent='♫'},(t-ctx.currentTime)*1000+100)
+}
+document.getElementById('music').onclick=music;
+</script>
+</body>
+</html>
